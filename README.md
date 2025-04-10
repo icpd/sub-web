@@ -1,10 +1,11 @@
 # sub-web
 
 
-> fork of https://github.com/CareyWang/sub-web
->
-> 修改短链后端服务为 https://github.com/x-dr/short
+ fork of https://github.com/CareyWang/sub-web
 
+修改短链后端服务为 [Sink](https://github.com/ccbikai/Sink)
+
+---
 基于 vue-cli 与 [tindy2013/subconverter](https://github.com/tindy2013/subconverter) 后端实现的配置自动生成。
 
 ## Table of Contents
