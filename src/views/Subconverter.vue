@@ -813,9 +813,9 @@ export default {
 
       this.$axios
           .post(shortUrlBackend + "/api/link/create", data, {
-            header: {
-              "Content-Type": "application/json; charset=utf-8",
-              "authorization": "Bearer " + shortUrlToken,
+            headers: {
+              "Content-Type": "application/json",
+              "Authorization": "Bearer " + shortUrlToken,
             },
           })
           .then((res) => {
