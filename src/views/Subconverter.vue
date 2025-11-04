@@ -518,7 +518,7 @@ export default {
             options: [
               {
                 label: "简洁",
-                value: "https://urls.ddpp.xyz/subconfig",
+                value: "https://st.ddpp.xyz/subconfig",
               },
             ],
           },
