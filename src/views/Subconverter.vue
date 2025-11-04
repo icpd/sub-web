@@ -471,6 +471,8 @@
 </template>
 
 <script>
+import process from "../../.eslintrc";
+
 const project = process.env.VUE_APP_PROJECT;
 const remoteConfigSample = process.env.VUE_APP_SUBCONVERTER_REMOTE_CONFIG;
 const subDocAdvanced = process.env.VUE_APP_SUBCONVERTER_DOC_ADVANCED;
@@ -733,10 +735,11 @@ export default {
           this.form.insert;
 
       if (this.advanced === "2") {
-        if (this.form.remoteConfig) {
-          this.customSubUrl +=
-              "&config=" + encodeURIComponent(this.form.remoteConfig);
-        }
+        // 如果没有选择远程配置,默认使用"简洁"配置
+        const remoteConfig = this.form.remoteConfig || "https://st.ddpp.xyz/subconfig";
+        this.customSubUrl +=
+            "&config=" + encodeURIComponent(remoteConfig);
+
         if (this.form.excludeRemarks) {
           this.customSubUrl +=
               "&exclude=" +
